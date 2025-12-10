@@ -1,19 +1,19 @@
 "use client";
-import Brain from "@/components/brain";
+// import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
 const AboutPage = () => {
-  const containerRef = useRef();
+  const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ container: containerRef });
 
-  const skillRef = useRef();
+  const skillRef = useRef(null);
   // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  const experienceRef = useRef();
+  const experienceRef = useRef(null);
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
@@ -83,7 +83,7 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
-          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div className="flex flex-col gap-12 justify-center" ref={null}>
             <motion.h1
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
@@ -292,7 +292,7 @@ const AboutPage = () => {
         </div>
       
         <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
-          <Brain scrollYProgress={scrollYProgress} />
+          {/* <Brain scrollYProgress={scrollYProgress} /> */}
         </div>
       </div>
     </motion.div>

@@ -8,30 +8,30 @@ const ContactPage = () => {
   const [error, setError] = useState(false);
   const text = "Say Hello";
 
-  const form = useRef();
+  const form = useRef(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setError(false);
-    setSuccess(false);
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+//     setError(false);
+//     setSuccess(false);
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          form.current.reset();
-        },
-        () => {
-          setError(true);
-        }
-      );
-  };
+//     emailjs
+//       .sendForm(
+//         process.env.NEXT_PUBLIC_SERVICE_ID,
+//         process.env.NEXT_PUBLIC_TEMPLATE_ID,
+//         form.current,
+//         process.env.NEXT_PUBLIC_PUBLIC_KEY
+//       )
+//       .then(
+//         () => {
+//           setSuccess(true);
+//           form.current.reset();
+//         },
+//         () => {
+//           setError(true);
+//         }
+//       );
+//   };
 
   return (
     <motion.div
@@ -61,7 +61,7 @@ const ContactPage = () => {
           </div>
         </div>
         <form
-          onSubmit={sendEmail}
+        //   onSubmit={}
           ref={form}
           className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
         >
