@@ -93,6 +93,7 @@ const Navbar = () => {
          <Icon icon="ri:github-fill" width="24" height="24" />
         </Link>
         <Link href="/">
+        <Icon icon="icon-park-outline:dribble" width="25" height="25" />
         </Link>
         <Link href="/">
          <Icon icon="skill-icons:instagram" width="24" height="25" />
@@ -104,7 +105,7 @@ const Navbar = () => {
          <Icon icon="logos:pinterest" width="25" height="25" />
         </Link>
         <Link href="/">
-          <Image src="/linkedin.png" alt="" width={24} height={24} />
+          <Icon icon="skill-icons:linkedin" width="25" height="25" />
         </Link>
       </div>
       <div className="md:hidden">
