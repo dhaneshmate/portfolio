@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
+
 
 const links = [
   { url: "/", title: "Home" },
@@ -88,19 +90,18 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex gap-4 w-1/3">
         <Link href="/">
-          <Image src="/github.png" alt="" width={24} height={24} />
+         <Icon icon="ri:github-fill" width="24" height="24" />
         </Link>
         <Link href="/">
-          <Image src="/dribbble.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
-          <Image src="/instagram.png" alt="" width={24} height={24} />
+         <Icon icon="skill-icons:instagram" width="24" height="25" />
         </Link>
         <Link href="/">
-          <Image src="/facebook.png" alt="" width={24} height={24} />
+          <Icon icon="logos:facebook" width="25" height="25" />
         </Link>
         <Link href="/">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
+         <Icon icon="logos:pinterest" width="25" height="25" />
         </Link>
         <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
